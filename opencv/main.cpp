@@ -1456,6 +1456,24 @@ cv:imshow("result_image", result);
 
 	waitKey(0);
 #endif
+#ifdef COURSE_02_TEST09
+	Mat src = imread("FACE.jp", IMREAD_GRAYSCALE);
+	if (src.empty()) {
+		printf("could not load image...\n");
+		return -1;
+	}
+	namedWindow("input image", WINDOW_AUTOSIZE);
+	imshow("input image", src);
+
+	Mat sumii = Mat::zeros(src.rows + 1, src.cols + 1, CV_32FC1);
+	Mat sqsumii = Mat::zeros(src.rows + 1, src.cols + 1, CV_64FC1);
+	integral(src, sumii, sqsumii);
+
+	Mat iiResult;
+	normalize(sumii, iiResult, 0, 255, NORM_MINMAX, CV_8UC1, Mat());
+	imshow("Integral Image", iiResult);
+	waitKey(0);
+#endif
 	return a.exec();
 }
 
