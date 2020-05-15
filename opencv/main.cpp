@@ -1457,7 +1457,7 @@ cv:imshow("result_image", result);
 	waitKey(0);
 #endif
 #ifdef COURSE_02_TEST09
-	Mat src = imread("FACE.jp", IMREAD_GRAYSCALE);
+	Mat src = imread("FACE.jpg", IMREAD_GRAYSCALE);
 	if (src.empty()) {
 		printf("could not load image...\n");
 		return -1;
