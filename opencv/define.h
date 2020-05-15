@@ -46,4 +46,4 @@
 //#define COURSE_02_TEST05 //09-SURF特征检测 - Enc
 //#define COURSE_02_TEST06 //09-SIFT特征检测 - Enc
 //#define COURSE_02_TEST07 //HOG特征检测 -Enc  重点学习
-//#define COURSE_02_TEST08 //LBP特征检测 -Enc
+#define COURSE_02_TEST08 //LBP特征检测 -Enc
